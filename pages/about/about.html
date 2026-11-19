@@ -1,0 +1,1337 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/assets/Vector.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../style/input.css" />
+    <link href="../../dist/output.css" rel="stylesheet" />
+    <title>Createx</title>
+  </head>
+  <body>
+    <header class="header bg-[#FEDBD4]/95 backdrop-blur-sm sticky top-0 z-50 border-b border-[#f1b4a8]/50">
+      <div
+        class="header-wrap py-4 lg:py-10 flex max-w-7xl mx-auto px-4 sm:px-6 justify-between items-center"
+      >
+        <div class="header-first flex items-center gap-6 lg:gap-20">
+          <div class="header-logo w-32 sm:w-auto">
+            <a href="/home.html">
+              <img src="/assets/logo.png" alt="Logo" />
+            </a>
+          </div>
+
+          <nav class="hidden lg:flex">
+            <ul class="flex gap-10">
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/about/about.html"
+                  t="nav_about"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/courses/courses.html"
+                  t="nav_courses"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/events/events.html"
+                  t="nav_events"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/blog/blog.html"
+                  t="nav_blog"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/contacts/contacts.html"
+                  t="nav_contacts"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-second flex gap-3 sm:gap-4 lg:gap-8 items-center">
+          <select
+            class="lang-select bg-white/80 hover:bg-white text-[#424551] font-semibold text-xs sm:text-sm border border-[#D7DADD] rounded px-2 py-1 outline-none cursor-pointer hover:border-[#FF3F18] transition-colors"
+            aria-label="Language"
+          >
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+          </select>
+
+          <button
+            t="btn_consultation"
+            class="hidden sm:block px-4 py-2 md:px-7 md:py-3 text-sm md:text-base rounded-lg bg-[#F75E05] hover:bg-[#fff] text-[#fff] hover:text-[#F75E05] border border-[#F75E05] transition-colors duration-300"
+          >
+            Get consultation
+          </button>
+
+          <div class="login-btns hidden md:flex items-center text-sm sm:text-base">
+            <button class="font-semibold text-[#424551] hover:text-[#F75E05]">
+              <a href="/pages/login/login.html" t="btn_login">Log in</a>
+            </button>
+            <span class="mx-1 text-[#424551]">/</span>
+            <button class="font-semibold text-[#424551] hover:text-[#F75E05]">
+              <a href="/pages/login/register.html" t="btn_register">Sign up</a>
+            </button>
+          </div>
+
+          <button
+            id="burger-btn"
+            class="lg:hidden text-[#424551] focus:outline-none p-2"
+            aria-label="Toggle Menu"
+          >
+            <svg
+              id="burger-icon"
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+
+            <svg
+              id="close-icon"
+              class="w-7 h-7 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-[#FEDBD4] w-full border-t border-[#f1b4a8] px-6 py-6 shadow-md transition-all"
+      >
+        <nav class="flex flex-col gap-4">
+          <div class="flex items-center justify-between pb-2 border-b border-[#f1b4a8]/60">
+            <span class="text-sm font-semibold text-[#424551]">Language:</span>
+            <select
+              class="lang-select bg-white text-[#424551] font-semibold text-sm border border-[#D7DADD] rounded px-3 py-1 outline-none"
+            >
+              <option value="en">English (EN)</option>
+              <option value="ru">Русский (RU)</option>
+              <option value="uz">O'zbek (UZ)</option>
+            </select>
+          </div>
+          <a
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/about/about.html"
+            t="nav_about"
+            >About Us</a
+          >
+          <a
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/courses/courses.html"
+            t="nav_courses"
+            >Courses</a
+          >
+          <a
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/events/events.html"
+            t="nav_events"
+            >Events</a
+          >
+          <a
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/blog/blog.html"
+            t="nav_blog"
+            >Blog</a
+          >
+          <a
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/contacts/contacts.html"
+            t="nav_contacts"
+            >Contacts</a
+          >
+
+          <button
+            t="btn_consultation"
+            class="sm:hidden mt-2 w-full px-4 py-3 text-sm font-semibold rounded-lg bg-[#F75E05] text-[#fff]"
+          >
+            Get consultation
+          </button>
+
+          <div class="md:hidden flex items-center justify-center gap-2 pt-2 border-t border-[#f1b4a8]/60 text-sm font-semibold">
+            <a href="/pages/login/login.html" class="text-[#424551] hover:text-[#F75E05]" t="btn_login">Log in</a>
+            <span class="text-[#424551]">/</span>
+            <a href="/pages/login/register.html" class="text-[#424551] hover:text-[#F75E05]" t="btn_register">Sign up</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section
+        class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col-reverse lg:flex-row items-center justify-between my-12 lg:my-[80px] gap-10"
+      >
+        <div class="flex flex-col items-start w-full lg:w-1/2">
+          <h3 class="font-bold text-base" t="about_hero-title">ABOUT US</h3>
+          <h1 class="font-bold text-3xl sm:text-4xl mb-4 sm:mb-[48px]" t="about_title">Createx Online School</h1>
+          <h5 class="font-bold max-w-[600px] mb-4 sm:mb-[24px] text-base sm:text-lg" t="about_lead">
+            Createx Online School is a leader in online studying. We have lots
+            of courses and programs from the main market experts.
+          </h5>
+          <p class="max-w-[600px] text-[#424551] mb-6 sm:mb-[60px] text-sm sm:text-base leading-relaxed" t="about_text">
+            We provide relevant approaches to online learning, internships and
+            employment in the largest companies in the country. Our educational
+            programs help you get a new specialty from scratch. During your
+            studies, we will help you find a job. Check the courses and online
+            events that we organise.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full sm:w-auto">
+            <a
+              class="text-center px-6 py-3 text-[#F75E05] hover:bg-[#F75E05] hover:text-[#fff] transition-colors duration-300 rounded-lg border border-[#F75E05] font-semibold text-sm sm:text-base"
+              href="/pages/events/events.html"
+            >
+              Explore events
+            </a>
+            <a
+              class="text-center px-6 py-3 text-[#fff] hover:bg-[#fff] hover:text-[#F75E05] transition-colors duration-300 bg-[#F75E05] rounded-lg border border-[#F75E05] font-semibold text-sm sm:text-base"
+              href="/pages/courses/courses.html"
+            >
+              Browse courses
+            </a>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2 flex justify-center">
+          <img src="/assets/illustration (3).png" alt="" class="max-w-full h-auto object-contain" />
+        </div>
+      </section>
+      <section
+        class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row items-center my-14 lg:my-[140px] gap-10 lg:gap-20"
+      >
+        <div class="flex flex-col gap-6 w-full lg:w-1/2">
+          <div class="flex items-center gap-3 cursor-pointer">
+            <img src="/assets/hover.png" alt="" /> <span class="font-semibold text-sm sm:text-base">Watch Video</span>
+          </div>
+          <img src="/assets/image3.png" alt="" class="w-full h-auto rounded-xl object-cover shadow-sm" />
+        </div>
+        <div class="grid grid-cols-2 gap-6 sm:gap-10 w-full lg:w-1/2">
+          <div class="flex items-center gap-4">
+            <h1 class="font-bold text-3xl sm:text-5xl text-[#FF3F3A]">1200</h1>
+            <h5 class="font-semibold text-xs sm:text-base" t="stat_graduated">students graduated</h5>
+          </div>
+          <div class="flex items-center gap-4">
+            <h1 class="font-bold text-3xl sm:text-5xl text-[#FF3F3A]">84</h1>
+            <h5 class="font-semibold text-xs sm:text-base" t="stat_courses">completed courses</h5>
+          </div>
+          <div class="flex items-center gap-4">
+            <h1 class="font-bold text-3xl sm:text-5xl text-[#FF3F3A]">16</h1>
+            <h5 class="font-semibold text-xs sm:text-base" t="stat_tutors">qualified tutors</h5>
+          </div>
+          <div class="flex items-center gap-4">
+            <h1 class="font-bold text-3xl sm:text-5xl text-[#FF3F3A]">5</h1>
+            <h5 class="font-semibold text-xs sm:text-base" t="stat_experience">years of experience</h5>
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center justify-center my-14 lg:my-[140px]"
+      >
+        <div class="text-center">
+          <h3 class="font-bold text-sm sm:text-base">WE ALWAYS STAND FOR</h3>
+          <h1 class="font-bold text-3xl sm:text-4xl mt-2">Our core values</h1>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 sm:mt-16 w-full">
+          <div class="flex flex-col items-center p-6 border rounded-xl sm:border-0 sm:border-r border-gray-200">
+            <img src="/assets/ic-structure.png" alt="" class="w-12 h-12" />
+            <h4 class="font-bold text-center mt-5 text-base sm:text-lg">Structured Approach</h4>
+            <p class="text-[#787A80] max-w-[240px] text-center text-sm mt-2">
+              Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.
+            </p>
+          </div>
+          <div class="flex flex-col items-center p-6 border rounded-xl sm:border-0 sm:border-r border-gray-200">
+            <img src="/assets/ic-chat.png" alt="" class="w-12 h-12" />
+            <h4 class="font-bold text-center mt-5 text-base sm:text-lg">Professional Feedbacks</h4>
+            <p class="text-[#787A80] max-w-[240px] text-center text-sm mt-2">
+              Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.
+            </p>
+          </div>
+          <div class="flex flex-col items-center p-6 border rounded-xl sm:border-0 sm:border-r border-gray-200">
+            <img src="/assets/Group (2).png" alt="" class="w-12 h-12" />
+            <h4 class="font-bold text-center mt-5 text-base sm:text-lg">Efficiency</h4>
+            <p class="text-[#787A80] max-w-[240px] text-center text-sm mt-2">
+              Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.
+            </p>
+          </div>
+          <div class="flex flex-col items-center p-6 border rounded-xl sm:border-0 border-gray-200">
+            <img src="/assets/ic-calendar.png" alt="" class="w-12 h-12" />
+            <h4 class="font-bold text-center mt-5 text-base sm:text-lg">Flexible Shedule</h4>
+            <p class="text-[#787A80] max-w-[240px] text-center text-sm mt-2">
+              Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 my-14 lg:my-[140px]">
+        <div class="text-center">
+          <h3 class="font-bold text-sm sm:text-base">OUR MAIN DIRECTIONS</h3>
+          <h1 class="font-bold text-3xl sm:text-4xl mt-2">What do we teach</h1>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 mt-10 sm:mt-16">
+          <div class="border rounded-xl overflow-hidden flex flex-col">
+            <img src="/assets/image4.png" alt="" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="p-1 px-3 bg-[#03CEA4] w-fit rounded-lg text-[#fff] text-xs font-semibold">
+                Marketing
+              </span>
+              <p class="my-4 text-[#787A80] text-sm">
+                Odio posuere netus quisque faucibus lectus arcu donec. Eget
+                dictum eu viverra faucibus. Viverra scelerisque consequat.
+              </p>
+              <a
+                href="/pages/courses/courses.html"
+                class="mt-auto hover:text-[red] font-semibold text-sm transition duration-300"
+                >Check Courses <span class="text-[red]">-></span></a
+              >
+            </div>
+          </div>
+          <div class="border rounded-xl overflow-hidden flex flex-col">
+            <img src="/assets/cat5.png" alt="" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="p-1 px-3 bg-[#5A87FC] w-fit rounded-lg text-[#fff] text-xs font-semibold">
+                Management
+              </span>
+              <p class="my-4 text-[#787A80] text-sm">
+                Odio posuere netus quisque faucibus lectus arcu donec. Eget
+                dictum eu viverra faucibus. Viverra scelerisque consequat.
+              </p>
+              <a
+                href="/pages/courses/courses.html"
+                class="mt-auto hover:text-[red] font-semibold text-sm transition duration-300"
+                >Check Courses <span class="text-[red]">-></span></a
+              >
+            </div>
+          </div>
+          <div class="border rounded-xl overflow-hidden flex flex-col">
+            <img src="/assets/cat6.png" alt="" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="p-1 px-3 bg-[#F89828] w-fit rounded-lg text-[#fff] text-xs font-semibold">
+                HR & Recruting
+              </span>
+              <p class="my-4 text-[#787A80] text-sm">
+                Odio posuere netus quisque faucibus lectus arcu donec. Eget
+                dictum eu viverra faucibus. Viverra scelerisque consequat.
+              </p>
+              <a
+                href="/pages/courses/courses.html"
+                class="mt-auto hover:text-[red] font-semibold text-sm transition duration-300"
+                >Check Courses <span class="text-[red]">-></span></a
+              >
+            </div>
+          </div>
+          <div class="border rounded-xl overflow-hidden flex flex-col">
+            <img src="/assets/cat7.png" alt="" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="p-1 px-3 bg-[#F52F6E] w-fit rounded-lg text-[#fff] text-xs font-semibold">
+                Design
+              </span>
+              <p class="my-4 text-[#787A80] text-sm">
+                Odio posuere netus quisque faucibus lectus arcu donec. Eget
+                dictum eu viverra faucibus. Viverra scelerisque consequat.
+              </p>
+              <a
+                href="/pages/courses/courses.html"
+                class="mt-auto hover:text-[red] font-semibold text-sm transition duration-300"
+                >Check Courses <span class="text-[red]">-></span></a
+              >
+            </div>
+          </div>
+          <div class="border rounded-xl overflow-hidden flex flex-col">
+            <img src="/assets/cat8.png" alt="" class="w-full h-48 object-cover" />
+            <div class="p-6 flex flex-col flex-grow">
+              <span class="p-1 px-3 bg-[#7772F1] w-fit rounded-lg text-[#fff] text-xs font-semibold">
+                Development
+              </span>
+              <p class="my-4 text-[#787A80] text-sm">
+                Odio posuere netus quisque faucibus lectus arcu donec. Eget
+                dictum eu viverra faucibus. Viverra scelerisque consequat.
+              </p>
+              <a
+                href="/pages/courses/courses.html"
+                class="mt-auto hover:text-[red] font-semibold text-sm transition duration-300"
+                >Check Courses <span class="text-[red]">-></span></a
+              >
+            </div>
+          </div>
+          <div
+            class="bg-[#F4F5F6] rounded-xl flex items-center justify-center p-8 min-h-[200px]"
+          >
+            <h2
+              class="max-w-[242px] text-center text-[#424551] font-bold text-lg"
+            >
+              New studying program coming soon...
+            </h2>
+          </div>
+        </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-4 sm:px-6 my-14 lg:my-[140px]">
+        <div class="mb-8 sm:mb-[60px]">
+          <h3 class="font-bold text-sm sm:text-base">STUDYING PROCESS</h3>
+          <h1 class="font-bold text-3xl sm:text-4xl mt-2">That’s how we do it</h1>
+        </div>
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-10">
+          <div class="w-full lg:w-1/2 flex flex-col">
+            <div class="flex items-start">
+              <span class="w-[8px] h-[8px] bg-[#FF3F3A] rounded-full mt-1.5 shrink-0"></span>
+              <div class="pl-6 sm:pl-10 border-l border-gray-300">
+                <h4 class="font-bold text-[#787A80] text-xs sm:text-sm">STEP 1</h4>
+                <h2 class="font-bold text-lg sm:text-xl mb-2">
+                  Watching online video lectures
+                </h2>
+                <p class="text-[#787A80] mb-8 text-sm sm:text-base leading-relaxed">
+                  Aliquam turpis viverra quam sit interdum blandit posuere
+                  pellentesque. Nisl, imperdiet gravida massa neque.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="w-[8px] h-[8px] bg-[#FF3F3A] rounded-full mt-1.5 shrink-0"></span>
+              <div class="pl-6 sm:pl-10 border-l border-gray-300">
+                <h4 class="font-bold text-[#787A80] text-xs sm:text-sm">STEP 2</h4>
+                <h2 class="font-bold text-lg sm:text-xl mb-2">Passing test</h2>
+                <p class="text-[#787A80] mb-8 text-sm sm:text-base leading-relaxed">
+                  Facilisis pellentesque quis accumsan ultricies. Eu egestas
+                  eget feugiat lacus, amet, sollicitudin egestas laoreet etiam.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="w-[8px] h-[8px] bg-[#FF3F3A] rounded-full mt-1.5 shrink-0"></span>
+              <div class="pl-6 sm:pl-10 border-l border-gray-300">
+                <h4 class="font-bold text-[#787A80] text-xs sm:text-sm">STEP 3</h4>
+                <h2 class="font-bold text-lg sm:text-xl mb-2">Curator’s feedback</h2>
+                <p class="text-[#787A80] mb-8 text-sm sm:text-base leading-relaxed">
+                  Eget amet, enim pharetra leo egestas nisi, odio imperdiet
+                  facilisis. Aliquet orci varius volutpat egestas facilisi
+                  lobortis.
+                </p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <span class="w-[8px] h-[8px] bg-[#FF3F3A] rounded-full mt-1.5 shrink-0"></span>
+              <div class="pl-6 sm:pl-10 border-l border-transparent">
+                <h4 class="font-bold text-[#787A80] text-xs sm:text-sm">STEP 4</h4>
+                <h2 class="font-bold text-lg sm:text-xl mb-2">
+                  Corrections if needed
+                </h2>
+                <p class="text-[#787A80] text-sm sm:text-base leading-relaxed">
+                  Non tempor pulvinar tincidunt aliquam. Placerat ultricies
+                  malesuada dui auctor.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 flex justify-center">
+            <img src="/assets/illustration (4).png" alt="" class="max-w-full h-auto object-contain" />
+          </div>
+        </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-6 mb-[120px]">
+        <div class="text-center">
+          <h3 class="font-bold">BEST TUTORS ALL ARE HERE</h3>
+          <h1 class="font-bold text-3xl sm:text-4xl">Meet our team</h1>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center mt-12 sm:mt-16">
+            <div class="flex flex-col gap-5 items-center">
+              <div
+                class="group relative h-96 w-72 overflow-hidden rounded-xl bg-amber-400"
+              >
+                <img
+                  src="/assets/swiper-img.png"
+                  alt="Profile"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <h4 class="font-bold">Dianne Russell</h4>
+                <p>Founder and CEO</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 items-center">
+              <div
+                class="group relative h-96 w-72 overflow-hidden rounded-xl bg-amber-400"
+              >
+                <img
+                  src="/assets/swiper-img.png"
+                  alt="Profile"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <h4 class="font-bold">Jerome Bell</h4>
+                <p>Founder and Program Director</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 items-center">
+              <div
+                class="group relative h-96 w-72 overflow-hidden rounded-xl bg-amber-400"
+              >
+                <img
+                  src="/assets/swiper-img.png"
+                  alt="Profile"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <h4 class="font-bold">Kristin Watson</h4>
+                <p>Marketer, Curator of Marketing Course</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 items-center">
+              <div
+                class="group relative h-96 w-72 overflow-hidden rounded-xl bg-amber-400"
+              >
+                <img
+                  src="/assets/swiper-img.png"
+                  alt="Profile"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <h4 class="font-bold">Marvin McKinney</h4>
+                <p>PM, Curator of Management Course</p>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="flex items-center justify-between">
+            <div class="flex flex-col gap-5 items-center">
+              <div
+                class="group relative h-96 w-72 overflow-hidden rounded-xl bg-amber-400"
+              >
+                <img
+                  src="/assets/swiper-img.png"
+                  alt="Profile"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <h4 class="font-bold">DLeslie Alexander Li</h4>
+                <p>FCurator of HR & Recruting Course</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 items-center">
+              <div
+                class="group relative h-96 w-72 overflow-hidden rounded-xl bg-amber-400"
+              >
+                <img
+                  src="/assets/swiper-img.png"
+                  alt="Profile"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <h4 class="font-bold">Kathryn Murphy</h4>
+                <p>Analyst and Marketing specialist</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 items-center">
+              <div
+                class="group relative h-96 w-72 overflow-hidden rounded-xl bg-amber-400"
+              >
+                <img
+                  src="/assets/swiper-img.png"
+                  alt="Profile"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <h4 class="font-bold">Brooklyn Simmons</h4>
+                <p>Curator of Development Course</p>
+              </div>
+            </div>
+            <div class="flex flex-col gap-5 items-center">
+              <div
+                class="group relative h-96 w-72 overflow-hidden rounded-xl bg-amber-400"
+              >
+                <img
+                  src="/assets/swiper-img.png"
+                  alt="Profile"
+                  class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+
+                <div
+                  class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                ></div>
+
+                <div
+                  class="absolute bottom-4 right-4 flex items-center gap-3 opacity-0 translate-y-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-y-0"
+                >
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                      />
+                    </svg>
+                  </a>
+
+                  <a
+                    href="#"
+                    class="text-white hover:text-amber-400 transition-colors"
+                  >
+                    <svg class="h-5 w-5 fill-current" viewBox="0 0 24 24">
+                      <path
+                        d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <div class="flex items-center flex-col">
+                <h4 class="font-bold">Cody Fisher</h4>
+                <p>UX Designer, Curator of Design Course</p>
+              </div>
+            </div>
+        </div> -->
+      </section>
+      <section class="test bg-[#F4F5F6]">
+        <div
+          class="test-wrap max-w-7xl mx-auto px-6 py-20 flex flex-col items-center gap-10"
+        >
+          <div class="test-info flex flex-col items-center gap-5 text-center">
+            <h3 class="font-bold text-base">TESTIMONIALS</h3>
+            <h1 class="font-bold text-4xl">What our students say</h1>
+          </div>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-card p-6 sm:p-10 lg:px-[105px] lg:py-[64px] bg-[#fff] rounded-xl">
+                  <div class="flex items-start gap-5">
+                    <div class="font-bold text-6xl text-[#F75E05]">"</div>
+                    <div class="text-start max-w-[752px]">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex mt-[24px] items-center gap-5">
+                    <img
+                      class="max-w-[72px] max-h-[72px]"
+                      src="/assets/image (28).png"
+                      alt=""
+                    />
+                    <div class="text-start">
+                      <h5 class="font-bold">Eleanor Pena</h5>
+                      <p lang="text-[#787A80]">Position, Course</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card p-6 sm:p-10 lg:px-[105px] lg:py-[64px] bg-[#fff] rounded-xl">
+                  <div class="flex items-start gap-5">
+                    <div class="font-bold text-6xl text-[#F75E05]">"</div>
+                    <div class="text-start max-w-[752px]">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex mt-[24px] items-center gap-5">
+                    <img
+                      class="max-w-[72px] max-h-[72px]"
+                      src="/assets/image (28).png"
+                      alt=""
+                    />
+                    <div class="text-start">
+                      <h5 class="font-bold">Eleanor Pena</h5>
+                      <p lang="text-[#787A80]">Position, Course</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card p-6 sm:p-10 lg:px-[105px] lg:py-[64px] bg-[#fff] rounded-xl">
+                  <div class="flex items-start gap-5">
+                    <div class="font-bold text-6xl text-[#F75E05]">"</div>
+                    <div class="text-start max-w-[752px]">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex mt-[24px] items-center gap-5">
+                    <img
+                      class="max-w-[72px] max-h-[72px]"
+                      src="/assets/image (28).png"
+                      alt=""
+                    />
+                    <div class="text-start">
+                      <h5 class="font-bold">Eleanor Pena</h5>
+                      <p lang="text-[#787A80]">Position, Course</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-card p-6 sm:p-10 lg:px-[105px] lg:py-[64px] bg-[#fff] rounded-xl">
+                  <div class="flex items-start gap-5">
+                    <div class="font-bold text-6xl text-[#F75E05]">"</div>
+                    <div class="text-start max-w-[752px]">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Justo, amet lectus quam viverra mus lobortis fermentum
+                        amet, eu. Pulvinar eu sed purus facilisi. Vitae id
+                        turpis tempus ornare turpis quis non. Congue tortor in
+                        euismod vulputate etiam eros. Pulvinar neque pharetra
+                        arcu diam maecenas diam integer in.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex mt-[24px] items-center gap-5">
+                    <img
+                      class="max-w-[72px] max-h-[72px]"
+                      src="/assets/image (28).png"
+                      alt=""
+                    />
+                    <div class="text-start">
+                      <h5 class="font-bold">Eleanor Pena</h5>
+                      <p lang="text-[#787A80]">Position, Course</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+      <section class="posts max-w-7xl mx-auto px-6 py-20">
+        <div class="posts-info flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10">
+          <div>
+            <h3 class="font-bold text-base">Our blog</h3>
+            <h1 class="font-bold text-3xl sm:text-4xl">Latest posts</h1>
+          </div>
+          <a
+            class="px-[30px] py-[10px] text-[#fff] hover:bg-[#fff] hover:text-[#F75E05] transition-colors duration-300 bg-[#F75E05] rounded-lg border border-[#F75E05]"
+            href="/pages/blog/blog.html"
+          >
+            Go to blog</a
+          >
+        </div>
+        <div class="posts-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div class="posts-card">
+            <div>
+              <p
+                class="relative top-[40px] left-[10px] p-1 bg-[#fff] w-[70px] rounded-lg"
+              >
+                Podcast
+              </p>
+              <img src="/assets/post.png" alt="" />
+            </div>
+            <div>
+              <h4 class="font-normal text-base text-[#787A80]">
+                Marketing | September 4, 2020 | 36 min
+              </h4>
+              <h2 class="font-bold max-w-[390px] py-[8px]">
+                What is traffic arbitrage and does it really make money?
+              </h2>
+              <p class="text-[#787A80] max-w-[390px] pb-[16px]">
+                Pharetra, ullamcorper iaculis viverra parturient sed id sed.
+                Convallis proin dignissim lacus, purus gravida...
+              </p>
+              <a href="/pages/blog/blogDetail.html"
+                >Listen <span class="text-[#F75E05]">-></span></a
+              >
+            </div>
+          </div>
+          <div class="posts-card">
+            <div>
+              <p
+                class="relative top-[40px] left-[10px] p-1 bg-[#fff] w-[70px] rounded-lg"
+              >
+                Podcast
+              </p>
+              <img src="/assets/post.png" alt="" />
+            </div>
+            <div>
+              <h4 class="font-normal text-base text-[#787A80]">
+                Marketing | September 4, 2020 | 36 min
+              </h4>
+              <h2 class="font-bold max-w-[390px] py-[8px]">
+                What is traffic arbitrage and does it really make money?
+              </h2>
+              <p class="text-[#787A80] max-w-[390px] pb-[16px]">
+                Pharetra, ullamcorper iaculis viverra parturient sed id sed.
+                Convallis proin dignissim lacus, purus gravida...
+              </p>
+              <a href="/pages/blog/blogDetail.html"
+                >Listen <span class="text-[#F75E05]">-></span></a
+              >
+            </div>
+          </div>
+          <div class="posts-card">
+            <div>
+              <p
+                class="relative top-[40px] left-[10px] p-1 bg-[#fff] w-[70px] rounded-lg"
+              >
+                Podcast
+              </p>
+              <img src="/assets/post.png" alt="" />
+            </div>
+            <div>
+              <h4 class="font-normal text-base text-[#787A80]">
+                Marketing | September 4, 2020 | 36 min
+              </h4>
+              <h2 class="font-bold max-w-[390px] py-[8px]">
+                What is traffic arbitrage and does it really make money?
+              </h2>
+              <p class="text-[#787A80] max-w-[390px] pb-[16px]">
+                Pharetra, ullamcorper iaculis viverra parturient sed id sed.
+                Convallis proin dignissim lacus, purus gravida...
+              </p>
+              <a href="/pages/blog/blogDetail.html"
+                >Listen <span class="text-[#F75E05]">-></span></a
+              >
+            </div>
+        </div>
+      </section>
+      <section class="miss bg-[#FEDDCF]">
+        <div
+          class="miss-info max-w-7xl mx-auto px-6 pt-16 pb-6 flex items-center justify-center flex-col gap-2 text-center"
+        >
+          <h3 class="font-bold text-sm sm:text-base">Don’t miss anything</h3>
+          <h1 class="font-bold text-2xl sm:text-4xl max-w-[810px]">
+            Subscribe to the Createx School announcements
+          </h1>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pb-16 flex flex-col lg:flex-row items-center justify-between gap-6">
+          <img src="/assets/illustration (2).png" alt="" class="hidden lg:block w-48 xl:w-auto" />
+          <div class="flex flex-col sm:flex-row gap-3 w-full max-w-lg justify-center">
+            <input
+              placeholder="Your working email"
+              class="p-3 w-full bg-[#fff] rounded-lg border border-gray-300"
+              type="email"
+            />
+            <button
+              class="px-[30px] py-[10px] text-[#fff] hover:bg-[#fff] hover:text-[#F75E05] transition-colors duration-300 bg-[#F75E05] rounded-lg border border-[#F75E05] shrink-0"
+            >
+              Subscribe
+            </button>
+          </div>
+          <img src="/assets/illustration (2).png" alt="" class="hidden lg:block w-48 xl:w-auto" />
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#1E212C]">
+      <div class="footer-wrap flex flex-col items-start max-w-7xl mx-auto px-6">
+        <div class="footer-head my-12 lg:my-16 flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-8 lg:gap-12 w-full">
+          <div class="head-first flex flex-col gap-5">
+            <img class="w-[130px]" src="../../assets/logo (1).png" alt="" />
+            <p class="text-[#94959B] w-[279px] text-xs">
+              Createx Online School is a leader in online studying. We have lots
+              of courses and programs from the main market experts. We provide
+              relevant approaches to online learning, internships and employment
+              in the largest companies in the country.
+            </p>
+            <div class="flex gap-5">
+              <img class="w-[24px]" src="./assets/Facebook.png" alt="" />
+              <img class="w-[24px]" src="./assets/Twitter.png" alt="" />
+              <img class="w-[24px]" src="./assets/YouTube.png" alt="" />
+              <img class="w-[24px]" src="./assets/telegram (3).png" alt="" />
+              <img class="w-[24px]" src="./assets/Instagram (2).png" alt="" />
+              <img class="w-[24px]" src="./assets/Linked-In.png" alt="" />
+            </div>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_sitemap" class="text-base font-bold text-[#fff]">SITE MAP</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/about/about.html"
+                    t="nav_about"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/courses/courses.html"
+                    t="nav_courses"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/events/events.html"
+                    t="nav_events"
+                    >Events</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/blog/blog.html"
+                    t="nav_blog"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/contacts/contacts.html"
+                    t="nav_contacts"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_courses" class="text-base font-bold text-[#fff]">COURSES</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Marketing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >HR & Recruting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Development</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_contact" class="text-base font-bold text-[#fff]">CONTACT US</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li class="flex gap-2">
+                  <img src="./assets/iPhone.png" alt="" />
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >(405) 555-0128</a
+                  >
+                </li>
+                <li class="flex gap-2">
+                  <img src="./assets/Mail.png" alt="" />
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >hello@createx.com</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-third max-w-sm">
+            <h2 t="footer_newsletter" class="text-base font-bold text-[#fff]">
+              SIGN UP TO OUR NEWSLETTER
+            </h2>
+            <input
+              t="placeholder_email"
+              class="mt-5 mb-5 bg-[#FFFFFF1F] p-2.5 w-full rounded-lg border border-gray-600 text-white placeholder-gray-400 focus:outline-none"
+              type="email"
+              placeholder="Email"
+            />
+            <p t="footer_disclaimer" class="text-[#94959B] text-xs">
+              *Subscribe to our newsletter to receive communications and early
+              updates from Createx SEO Agency.
+            </p>
+          </div>
+        </div>
+        <div class="footer-end"></div>
+      </div>
+    </footer>
+    <script>
+      const swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script src="/js/translations.js"></script>
+  </body>
+</html>

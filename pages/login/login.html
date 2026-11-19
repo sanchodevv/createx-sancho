@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Sign in - Createx</title>
+  </head>
+  <body class="bg-[#1E212C]/75 min-h-screen flex items-center justify-center p-4 font-['Lato',sans-serif]">
+    <div class="relative bg-white rounded-xl shadow-2xl p-6 sm:p-10 text-[#424551] w-full max-w-[490px]">
+      <div class="flex items-center justify-between mb-4">
+        <select
+          class="lang-select bg-gray-50 hover:bg-white text-[#424551] font-semibold text-xs border border-[#D7DADD] rounded px-2 py-1 outline-none cursor-pointer hover:border-[#FF3F18] transition-colors"
+          aria-label="Language"
+        >
+          <option value="en">EN</option>
+          <option value="ru">RU</option>
+          <option value="uz">UZ</option>
+        </select>
+        <!-- Close / Back Button -->
+        <a
+          href="/home.html"
+          class="text-[#787A80] hover:text-[#1E212C] transition-colors p-1"
+          aria-label="Back to home"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Header -->
+      <h2 t="login_title" class="text-2xl sm:text-[28px] font-bold text-[#1E212C] text-center mb-2">
+        Sign in
+      </h2>
+      <p t="login_subtitle" class="text-xs sm:text-sm text-[#787A80] text-center max-w-[340px] mx-auto mb-6 leading-relaxed">
+        Sign in to your account using email and password provided during registration.
+      </p>
+
+      <!-- Form -->
+      <form class="flex flex-col gap-4" onsubmit="event.preventDefault()">
+        <!-- Email -->
+        <div>
+          <label t="label_email" class="block text-sm text-[#424551] mb-1.5 font-normal">
+            Email
+          </label>
+          <input
+            t="placeholder_email"
+            type="email"
+            placeholder="Your working email"
+            required
+            class="w-full px-4 py-3 border border-[#D7DADD] rounded text-sm text-[#424551] placeholder-[#9A9CA5] focus:outline-none focus:border-[#FF3F18] transition-colors"
+          />
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label t="label_password" class="block text-sm text-[#424551] mb-1.5 font-normal">
+            Password
+          </label>
+          <div class="relative">
+            <input
+              id="loginPassword"
+              type="password"
+              placeholder="••••••••••••"
+              required
+              class="w-full pl-4 pr-11 py-3 border border-[#D7DADD] rounded text-sm text-[#424551] placeholder-[#9A9CA5] focus:outline-none focus:border-[#FF3F18] transition-colors"
+            />
+            <button
+              type="button"
+              onclick="togglePass('loginPassword', this)"
+              class="absolute right-3 top-1/2 -translate-y-1/2 text-[#787A80] hover:text-[#424551] p-1 cursor-pointer"
+              aria-label="Toggle password visibility"
+            >
+              <svg class="w-4 h-4 eye-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Keep me signed in + Forgot password -->
+        <div class="flex items-center justify-between text-sm mt-1">
+          <label class="flex items-center gap-2 cursor-pointer select-none">
+            <input
+              type="checkbox"
+              checked
+              class="w-4 h-4 rounded accent-[#FF3F18] border-[#D7DADD] text-[#FF3F18] focus:ring-[#FF3F18] cursor-pointer"
+            />
+            <span t="login_keep" class="text-xs sm:text-sm text-[#424551]">Keep me signed in</span>
+          </label>
+          <a t="login_forgot" href="#" class="text-xs sm:text-sm text-[#FF3F18] hover:underline font-normal">
+            Forgot password?
+          </a>
+        </div>
+
+        <!-- Submit Button -->
+        <button
+          t="btn_signin"
+          type="submit"
+          class="w-full mt-2 bg-[#FF3F18] hover:bg-[#E0340E] text-white font-bold py-3 px-6 rounded transition-colors duration-200 cursor-pointer text-sm sm:text-base"
+        >
+          Sign in
+        </button>
+      </form>
+
+      <!-- Switch to Sign up -->
+      <p class="text-xs sm:text-sm text-[#787A80] text-center mt-5">
+        <span t="login_no_acc">Don't have an account?</span>
+        <a
+          href="/pages/login/register.html"
+          t="btn_signup"
+          class="text-[#FF3F18] font-bold hover:underline cursor-pointer ml-1"
+        >
+          Sign up
+        </a>
+      </p>
+
+      <!-- Social Login -->
+      <div class="mt-6 pt-5 border-t border-[#E5E8ED] text-center">
+        <p t="or_sign_with" class="text-xs text-[#787A80] mb-3">Or sign in with</p>
+        <div class="flex items-center justify-center gap-4 text-[#787A80]">
+          <a href="#" class="hover:text-[#1877F2] transition-colors p-1" aria-label="Sign in with Facebook">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="#" class="hover:text-[#EA4335] transition-colors p-1" aria-label="Sign in with Google">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/>
+            </svg>
+          </a>
+          <a href="#" class="text-[#FF3F18] hover:text-[#E0340E] transition-colors p-1" aria-label="Sign in with Twitter">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.936 9.936 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="#" class="hover:text-[#0A66C2] transition-colors p-1" aria-label="Sign in with LinkedIn">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function togglePass(id, btn) {
+        const input = document.getElementById(id);
+        if (input.type === "password") {
+          input.type = "text";
+        } else {
+          input.type = "password";
+        }
+      }
+    </script>
+    <script src="/js/translations.js"></script>
+  </body>
+</html>

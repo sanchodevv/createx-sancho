@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="/assets/Vector.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../style/input.css" />
+    <link href="../../dist/output.css" rel="stylesheet" />
+    <title>Createx</title>
+  </head>
+  <body>
+    <header class="header relative">
+      <div
+        class="header-wrap py-4 lg:py-10 flex max-w-7xl mx-auto px-4 sm:px-6 justify-between items-center"
+      >
+        <div class="header-first flex items-center gap-6 lg:gap-20">
+          <div class="header-logo w-32 sm:w-auto">
+            <a href="/">
+              <img src="/assets/logo.png" alt="Logo" />
+            </a>
+          </div>
+
+          <nav class="hidden lg:flex">
+            <ul class="flex gap-10">
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/about/about.html"
+                  t="nav_about"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/courses/courses.html"
+                  t="nav_courses"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/events/events.html"
+                  t="nav_events"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/blog/blog.html"
+                  t="nav_blog"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/contacts/contacts.html"
+                  t="nav_contacts"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-second flex gap-3 sm:gap-4 lg:gap-8 items-center">
+          <select
+            class="lang-select bg-white/80 hover:bg-white text-[#424551] font-semibold text-xs sm:text-sm border border-[#D7DADD] rounded px-2 py-1 outline-none cursor-pointer hover:border-[#FF3F18] transition-colors"
+            aria-label="Language"
+          >
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+          </select>
+
+          <button
+            t="btn_consultation"
+            class="hidden sm:block px-4 py-2 md:px-7 md:py-3 text-sm md:text-base rounded-lg bg-[#F75E05] hover:bg-[#fff] text-[#fff] hover:text-[#F75E05] border border-[#F75E05] transition-colors duration-300"
+          >
+            Get consultation
+          </button>
+
+          <div class="login-btns text-sm sm:text-base">
+            <button class="font-semibold text-[#424551]">
+              <a href="/pages/login/login.html" t="btn_login">Log in</a> /
+            </button>
+            <button class="font-semibold text-[#424551]">
+              <a href="/pages/login/register.html" t="btn_register">Sign up</a>
+            </button>
+          </div>
+
+          <button
+            id="burger-btn"
+            class="lg:hidden text-[#424551] focus:outline-none p-2"
+            aria-label="Toggle Menu"
+          >
+            <svg
+              id="burger-icon"
+              class="w-7 h-7"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+
+            <svg
+              id="close-icon"
+              class="w-7 h-7 hidden"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden bg-[#FEDBD4] w-full border-t border-[#f1b4a8] px-6 py-6 shadow-md transition-all"
+      >
+        <nav class="flex flex-col gap-4">
+          <a
+            t="nav_about"
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/about/about.html"
+            >About Us</a
+          >
+          <a
+            t="nav_courses"
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/courses/courses.html"
+            >Courses</a
+          >
+          <a
+            t="nav_events"
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/events/events.html"
+            >Events</a
+          >
+          <a
+            t="nav_blog"
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/blog/blog.html"
+            >Blog</a
+          >
+          <a
+            t="nav_contacts"
+            class="text-lg font-bold text-[#424551] hover:text-[#F75E05]"
+            href="/pages/contacts/contacts.html"
+            >Contacts</a
+          >
+
+          <button
+            t="btn_consultation"
+            class="sm:hidden mt-2 w-full px-4 py-3 text-sm font-semibold rounded-lg bg-[#F75E05] text-[#fff]"
+          >
+            Get consultation
+          </button>
+        </nav>
+      </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6">
+      <section class="flex flex-col lg:flex-row items-start justify-between gap-12 mt-12 sm:mt-16 mb-20 sm:mb-28">
+        <div class="flex flex-col items-start w-full lg:w-5/12">
+          <h3 t="contact_info_tag" class="font-bold text-sm sm:text-base">CONTACT INFO</h3>
+          <h1 t="contact_title" class="font-bold text-3xl sm:text-4xl mt-2">Get in touch</h1>
+          <div class="flex flex-col items-start gap-5 my-8 sm:my-10">
+            <div class="flex items-center gap-3">
+              <img src="/assets/Chat.png" alt="" />
+              <div>
+                <h6 t="contact_talk" class="text-[#787A80] font-bold text-sm">Talk to us:</h6>
+                <p class="text-sm sm:text-base">hello@createx.com</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/assets/Rectangle (Stroke).png" alt="" />
+              <div>
+                <h6 t="contact_call" class="text-[#787A80] font-bold text-sm">Call us:</h6>
+                <p class="text-sm sm:text-base">(405) 555-0128</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/assets/outline.png" alt="" />
+              <div>
+                <h6 t="contact_address" class="text-[#787A80] font-bold text-sm">Address:</h6>
+                <p class="text-sm sm:text-base">2464 Royal Ln. Mesa, New Jersey 45463, USA</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 t="contact_follow" class="text-sm font-bold tracking-wider mb-3">FOLLOW US:</h3>
+            <div class="flex gap-4 sm:gap-5">
+              <img class="w-[24px]" src="/assets/Facebook.png" alt="" />
+              <img class="w-[24px]" src="/assets/Twitter.png" alt="" />
+              <img class="w-[24px]" src="/assets/YouTube.png" alt="" />
+              <img class="w-[24px]" src="/assets/telegram (3).png" alt="" />
+              <img class="w-[24px]" src="/assets/Instagram (2).png" alt="" />
+              <img class="w-[24px]" src="/assets/Linked-In.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="w-full lg:w-7/12">
+          <div class="w-full h-[300px] sm:h-[412px] rounded-2xl overflow-hidden shadow-sm">
+            <iframe
+              title="IT Park Khorezm Map Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1492.7514774015228!2d60.62081423987571!3d41.558358111458496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x41dfc9842c81fc9d%3A0x9e434d2b8a616ce9!2sIT%20Park!5e0!3m2!1suz!2s!4v1772552982809!5m2!1suz!2s"
+              allowfullscreen=""
+              loading="lazy"
+              class="w-full h-full border-0"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 mb-20 sm:mb-28">
+        <div class="w-full lg:w-5/12 hidden lg:flex justify-center">
+          <img src="/assets/illustration (5).png" alt="" class="max-w-md h-auto" />
+        </div>
+        <div class="w-full lg:w-7/12 max-w-2xl">
+          <h3 t="questions_tag" class="font-bold text-sm sm:text-base">Any questions?</h3>
+          <h1 t="drop_line_title" class="font-bold text-3xl sm:text-5xl mt-2">Drop us a line</h1>
+          <form action="#" class="mt-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div class="flex flex-col">
+                <label t="label_first_name" class="text-[#424551] text-sm font-semibold mb-2" for="#">First Name*</label>
+                <input
+                  t="placeholder_first_name"
+                  class="w-full h-[52px] border border-gray-300 px-4 rounded-lg outline-none focus:border-[#FF3F3A]"
+                  type="text"
+                  placeholder="Your First Name"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label t="label_last_name" class="text-[#424551] text-sm font-semibold mb-2" for="#">Last Name*</label>
+                <input
+                  t="placeholder_last_name"
+                  class="w-full h-[52px] border border-gray-300 px-4 rounded-lg outline-none focus:border-[#FF3F3A]"
+                  type="text"
+                  placeholder="Your Last Name"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5">
+              <div class="flex flex-col">
+                <label t="label_email_required" class="text-[#424551] text-sm font-semibold mb-2" for="#">Email*</label>
+                <input
+                  t="placeholder_email"
+                  class="w-full h-[52px] border border-gray-300 px-4 rounded-lg outline-none focus:border-[#FF3F3A]"
+                  type="email"
+                  placeholder="Your working email"
+                />
+              </div>
+              <div class="flex flex-col">
+                <label t="label_phone_required" class="text-[#424551] text-sm font-semibold mb-2" for="#">Phone*</label>
+                <input
+                  t="placeholder_phone"
+                  class="w-full h-[52px] border border-gray-300 px-4 rounded-lg outline-none focus:border-[#FF3F3A]"
+                  type="tel"
+                  placeholder="Your phone number"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col mt-5">
+              <label t="label_message_required" for="#" class="text-[#424551] text-sm font-semibold mb-2">Message*</label>
+              <textarea
+                t="placeholder_message"
+                class="h-[128px] border border-gray-300 p-4 rounded-lg outline-none focus:border-[#FF3F3A] resize-none"
+                name="massege"
+                id="1"
+                placeholder="Your message"
+              ></textarea>
+            </div>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 mt-8">
+              <div class="flex gap-3 items-center">
+                <input class="accent-red-500 w-4 h-4 shrink-0" type="checkbox" />
+                <p t="agree_communications" class="text-xs sm:text-sm text-[#424551]">
+                  I agree to receive communications from Createx Online School
+                </p>
+              </div>
+              <button
+                t="btn_send_message"
+                class="w-full sm:w-auto px-8 sm:px-10 py-3 bg-[#FF3F3A] text-[#fff] font-bold rounded-lg hover:text-[#FF3F3A] hover:bg-[#fff] border border-[#FF3F3A] transition-colors duration-300 shrink-0 text-center"
+              >
+                Send message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#1E212C]">
+      <div class="footer-wrap flex flex-col items-start max-w-7xl mx-auto px-6">
+        <div class="footer-head my-12 lg:my-16 flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-8 lg:gap-12 w-full">
+          <div class="head-first flex flex-col gap-5">
+            <img class="w-[130px]" src="../../assets/logo (1).png" alt="" />
+            <p class="text-[#94959B] w-[279px] text-xs">
+              Createx Online School is a leader in online studying. We have lots
+              of courses and programs from the main market experts. We provide
+              relevant approaches to online learning, internships and employment
+              in the largest companies in the country.
+            </p>
+            <div class="flex gap-5">
+              <img class="w-[24px]" src="/assets/Facebook.png" alt="" />
+              <img class="w-[24px]" src="/assets/Twitter.png" alt="" />
+              <img class="w-[24px]" src="/assets/YouTube.png" alt="" />
+              <img class="w-[24px]" src="/assets/telegram (3).png" alt="" />
+              <img class="w-[24px]" src="/assets/Instagram (2).png" alt="" />
+              <img class="w-[24px]" src="/assets/Linked-In.png" alt="" />
+            </div>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_sitemap" class="text-base font-bold text-[#fff]">SITE MAP</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/about/about.html"
+                    t="nav_about"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/courses/courses.html"
+                    t="nav_courses"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/events/events.html"
+                    t="nav_events"
+                    >Events</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/blog/blog.html"
+                    t="nav_blog"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/contacts/contacts.html"
+                    t="nav_contacts"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_courses" class="text-base font-bold text-[#fff]">COURSES</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Marketing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >HR & Recruting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Development</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_contact" class="text-base font-bold text-[#fff]">CONTACT US</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li class="flex gap-2">
+                  <img src="./assets/iPhone.png" alt="" />
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >(405) 555-0128</a
+                  >
+                </li>
+                <li class="flex gap-2">
+                  <img src="./assets/Mail.png" alt="" />
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >hello@createx.com</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-third max-w-sm">
+            <h2 t="footer_newsletter" class="text-base font-bold text-[#fff]">
+              SIGN UP TO OUR NEWSLETTER
+            </h2>
+            <input
+              t="placeholder_email"
+              class="mt-5 mb-5 bg-[#FFFFFF1F] p-2.5 w-full rounded-lg border border-gray-600 text-white placeholder-gray-400 focus:outline-none"
+              type="email"
+              placeholder="Email"
+            />
+            <p t="footer_disclaimer" class="text-[#94959B] text-xs">
+              *Subscribe to our newsletter to receive communications and early
+              updates from Createx SEO Agency.
+            </p>
+          </div>
+        </div>
+        <div class="footer-end"></div>
+      </div>
+    </footer>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/js/translations.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

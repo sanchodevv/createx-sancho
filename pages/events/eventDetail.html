@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/Vector.png" />
+    <title>Event Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-[#1E212C]">
+    <header class="header bg-[#FEDCD1] sticky top-0 z-50 border-b border-[#f4b6a4]/50">
+      <div
+        class="header-wrap py-4 flex max-w-7xl mx-auto px-6 justify-between items-center"
+      >
+        <div class="header-first flex items-center gap-10 lg:gap-16">
+          <div class="header-logo">
+            <a href="/home.html"><img src="../../assets/logo.png" alt="Createx Logo" class="h-6 sm:h-7" /></a>
+          </div>
+          <nav class="hidden lg:block">
+            <ul class="flex gap-8 xl:gap-10">
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/about/about.html"
+                  t="nav_about"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/courses/courses.html"
+                  t="nav_courses"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/events/events.html"
+                  t="nav_events"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/blog/blog.html"
+                  t="nav_blog"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/contacts/contacts.html"
+                  t="nav_contacts"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-second flex gap-3 sm:gap-6 items-center">
+          <select
+            class="lang-select bg-white/80 hover:bg-white text-[#424551] font-semibold text-xs sm:text-sm border border-[#D7DADD] rounded px-2 py-1 outline-none cursor-pointer hover:border-[#FF3F18] transition-colors"
+            aria-label="Language"
+          >
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+          </select>
+
+          <button
+            t="btn_consultation"
+            class="hidden sm:inline-block px-5 py-2.5 rounded-lg bg-[#F75E05] hover:bg-[#fff] text-[#fff] hover:text-[#F75E05] transition-colors duration-300 text-sm font-semibold border border-[#F75E05]"
+          >
+            Get consultation
+          </button>
+          <div class="login-btns hidden md:flex items-center text-sm">
+            <button class="font-semibold text-[#424551] hover:text-[#F75E05]">
+              <a href="/pages/login/login.html" t="btn_login">Log in</a>
+            </button>
+            <span class="mx-1 text-[#424551]">/</span>
+            <button class="font-semibold text-[#424551] hover:text-[#F75E05]">
+              <a href="/pages/login/register.html" t="btn_register">Sign up</a>
+            </button>
+          </div>
+          <button
+            id="burger-btn"
+            class="lg:hidden p-2 text-gray-700 hover:text-[#F75E05] focus:outline-none"
+            aria-label="Toggle navigation"
+          >
+            <svg id="burger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden bg-[#FEDCD1] border-t border-[#f4b6a4] px-6 py-4 shadow-lg transition-all duration-300">
+        <nav class="flex flex-col gap-3">
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/about/about.html" t="nav_about">About Us</a>
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/courses/courses.html" t="nav_courses">Courses</a>
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/events/events.html" t="nav_events">Events</a>
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/blog/blog.html" t="nav_blog">Blog</a>
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/contacts/contacts.html" t="nav_contacts">Contacts</a>
+          <div class="pt-3 border-t border-[#f4b6a4] flex flex-col gap-3">
+            <button t="btn_consultation" class="w-full py-2.5 rounded-lg bg-[#F75E05] text-[#fff] text-sm font-semibold">
+              Get consultation
+            </button>
+            <div class="flex justify-center items-center gap-2 text-sm font-semibold pt-1">
+              <a href="/pages/login/login.html" class="text-[#424551] hover:text-[#F75E05]" t="btn_login">Log in</a>
+              <span class="text-[#424551]">/</span>
+              <a href="/pages/login/register.html" class="text-[#424551] hover:text-[#F75E05]" t="btn_register">Sign up</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div id="detailRoot"></div>
+      <section class="bg-[#FEDCD1]">
+        <div
+          class="py-12 lg:py-16 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-16 max-w-7xl mx-auto px-6"
+        >
+          <div class="hidden lg:block shrink-0">
+            <img src="/assets/illustration (6).png" alt="" class="max-w-xs xl:max-w-sm h-auto" />
+          </div>
+          <div class="w-full">
+            <h1 class="font-bold text-2xl sm:text-4xl max-w-[660px]">
+              Don’t want to miss the best events? Subscribe to our newsletter!
+            </h1>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-8 sm:mt-12 mb-6">
+              <input
+                class="px-4 py-3 rounded-md w-full sm:w-80 border border-gray-300 outline-none"
+                type="email"
+                placeholder="Your working email"
+              />
+              <button
+                class="text-center px-8 py-3 text-[#fff] hover:bg-[#fff] hover:text-[#F75E05] transition-colors duration-300 bg-[#F75E05] rounded-md border border-[#F75E05] font-semibold shrink-0"
+              >
+                Subscribe
+              </button>
+            </div>
+            <div class="flex gap-3 items-center text-sm">
+              <input class="accent-red-500 w-4 h-4 shrink-0" type="checkbox" />
+              <p>
+                I agree to receive communications from Createx Online School
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center justify-between gap-10 my-16 lg:my-28"
+      >
+        <div class="w-full max-w-lg">
+          <h3 class="font-bold text-sm tracking-wider uppercase">DON'T MISS THE EVENTS</h3>
+          <h1 class="font-bold text-3xl sm:text-5xl mt-2">Leave a request</h1>
+          <form class="mt-8 flex flex-col gap-5 w-full" action="#">
+            <div class="flex flex-col gap-2">
+              <label class="text-sm font-semibold">Full Name</label>
+              <input
+                class="px-4 py-3 border border-gray-300 rounded-md w-full outline-none"
+                type="text"
+                placeholder="Your full name"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-sm font-semibold">Email</label>
+              <input
+                class="px-4 py-3 border border-gray-300 rounded-md w-full outline-none"
+                type="email"
+                placeholder="Your working email"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label class="text-sm font-semibold">Phone</label>
+              <input
+                class="px-4 py-3 border border-gray-300 rounded-md w-full outline-none"
+                type="tel"
+                placeholder="Your working number"
+              />
+            </div>
+            <button
+              class="text-center mt-4 mb-2 py-3.5 px-8 text-[#fff] hover:bg-[#fff] hover:text-[#F75E05] transition-colors duration-300 bg-[#F75E05] rounded-md border border-[#F75E05] font-semibold w-full"
+            >
+              Join the event
+            </button>
+            <p class="text-xs text-[#787A80]">
+              * You will receive a link to the online lecture in an email after
+              registration.
+            </p>
+          </form>
+        </div>
+        <div class="w-full max-w-md flex justify-center">
+          <img src="/assets/illustration (7).png" alt="" class="max-w-full h-auto object-contain" />
+        </div>
+      </section>
+      <section class="max-w-7xl mx-auto px-6">
+        <div id="eventtt" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div
+            class="flex flex-col justify-between p-6 border border-[#E5E8ED] rounded bg-white min-h-[300px] transition duration-300 hover:shadow-[0_80px_80px_-20px_rgba(154,156,165,0.08)]"
+          >
+            <div>
+              <div class="mb-5">
+                <div
+                  class="text-[28px] font-black text-[#FF3F3A] leading-tight mb-1"
+                >
+                  05 Aug 
+                </div>
+                <div class="text-sm text-[#787A80]">11:00 – 14:00</div>
+              </div>
+              <div class="mb-6">
+                <h3 class="text-lg font-bold leading-snug mb-2">
+                  Formation of the organizational structure of the company in the face of uncertainty.
+                </h3>
+                <p class="text-sm text-[#787A80]">Onine master-class</p>
+              </div>
+            </div>
+            <a
+              href="/pages/events/events.html"
+              class="block w-full text-center py-3 px-8 border border-[#FF3F3A] rounded text-[#FF3F3A] font-bold text-sm transition duration-300 hover:bg-gradient-to-tr hover:from-[#FF3F3A] hover:to-[#F75E05] hover:text-white hover:border-transparent"
+            >
+              View more
+            </a>
+          </div>
+          <div
+            class="flex flex-col justify-between p-6 border border-[#E5E8ED] rounded bg-white min-h-[300px] transition duration-300 hover:shadow-[0_80px_80px_-20px_rgba(154,156,165,0.08)]"
+          >
+            <div>
+              <div class="mb-5">
+                <div
+                  class="text-[28px] font-black text-[#FF3F3A] leading-tight mb-1"
+                >
+                  05 Aug 
+                </div>
+                <div class="text-sm text-[#787A80]">11:00 – 14:00</div>
+              </div>
+              <div class="mb-6">
+                <h3 class="text-lg font-bold leading-snug mb-2">
+                  Formation of the organizational structure of the company in the face of uncertainty.
+                </h3>
+                <p class="text-sm text-[#787A80]">Onine master-class</p>
+              </div>
+            </div>
+            <a
+              href="/pages/events/events.html"
+              class="block w-full text-center py-3 px-8 border border-[#FF3F3A] rounded text-[#FF3F3A] font-bold text-sm transition duration-300 hover:bg-gradient-to-tr hover:from-[#FF3F3A] hover:to-[#F75E05] hover:text-white hover:border-transparent"
+            >
+              View more
+            </a>
+          </div>
+          <div
+            class="flex flex-col justify-between p-6 border border-[#E5E8ED] rounded bg-white min-h-[300px] transition duration-300 hover:shadow-[0_80px_80px_-20px_rgba(154,156,165,0.08)]"
+          >
+            <div>
+              <div class="mb-5">
+                <div
+                  class="text-[28px] font-black text-[#FF3F3A] leading-tight mb-1"
+                >
+                  05 Aug 
+                </div>
+                <div class="text-sm text-[#787A80]">11:00 – 14:00</div>
+              </div>
+              <div class="mb-6">
+                <h3 class="text-lg font-bold leading-snug mb-2">
+                  Formation of the organizational structure of the company in the face of uncertainty.
+                </h3>
+                <p class="text-sm text-[#787A80]">Onine master-class</p>
+              </div>
+            </div>
+            <a
+              href="/pages/events/events.html"
+              class="block w-full text-center py-3 px-8 border border-[#FF3F3A] rounded text-[#FF3F3A] font-bold text-sm transition duration-300 hover:bg-gradient-to-tr hover:from-[#FF3F3A] hover:to-[#F75E05] hover:text-white hover:border-transparent"
+            >
+              View more
+            </a>
+          </div>
+
+        </div>
+        <div
+          class="flex items-center gap-8 justify-center mt-[85px] mb-[185px]"
+        >
+          <h1 class="font-bold text-2xl">Do you want more?</h1>
+          <a
+            class="text-center px-[30px] py-3 text-[#fff] hover:bg-[#fff] hover:text-[#F75E05] transition-colors duration-300 bg-[#F75E05] rounded-md border border-[#F75E05] font-semibold"
+            href="/pages/events/events.html"
+            >Explore all events</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#1E212C]">
+      <div class="footer-wrap flex flex-col items-start max-w-7xl mx-auto px-6">
+        <div class="footer-head my-12 lg:my-16 flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-8 lg:gap-12 w-full">
+          <div class="head-first flex flex-col gap-5">
+            <img class="w-[130px]" src="../../assets/logo (1).png" alt="" />
+            <p class="text-[#94959B] w-[279px] text-xs">
+              Createx Online School is a leader in online studying. We have lots
+              of courses and programs from the main market experts. We provide
+              relevant approaches to online learning, internships and employment
+              in the largest companies in the country.
+            </p>
+            <div class="flex gap-5">
+              <img class="w-[24px]" src="/assets/Facebook.png" alt="" />
+              <img class="w-[24px]" src="/assets/Twitter.png" alt="" />
+              <img class="w-[24px]" src="/assets/YouTube.png" alt="" />
+              <img class="w-[24px]" src="/assets/telegram (3).png" alt="" />
+              <img class="w-[24px]" src="/assets/Instagram (2).png" alt="" />
+              <img class="w-[24px]" src="/assets/Linked-In.png" alt="" />
+            </div>
+          </div>
+          <div class="head-second">
+            <h2 class="text-base font-bold text-[#fff]">SITE MAP</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/about/about.html"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/courses/courses.html"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/events/events.html"
+                    >Events</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/blog/blog.html"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/contacts/contacts.html"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-second">
+            <h2 class="text-base font-bold text-[#fff]">COURSES</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Marketing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >HR & Recruting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Development</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-second">
+            <h2 class="text-base font-bold text-[#fff]">CONTACT US</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li class="flex gap-2">
+                  <img src="/assets/iPhone.png" alt="" />
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >(405) 555-0128</a
+                  >
+                </li>
+                <li class="flex gap-2">
+                  <img src="/assets/Mail.png" alt="" />
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >hello@createx.com</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-third max-w-sm">
+            <h2 class="text-base font-bold text-[#fff]">
+              SIGN UP TO OUR NEWSLETTER
+            </h2>
+            <input
+              class="mt-5 mb-5 bg-[#FFFFFF1F] p-2.5 w-full rounded-lg border border-gray-600 text-white placeholder-gray-400 focus:outline-none"
+              type="email"
+              placeholder="Email"
+            />
+            <p class="text-[#94959B] text-xs">
+              *Subscribe to our newsletter to receive communications and early
+              updates from Createx SEO Agency.
+            </p>
+          </div>
+        </div>
+        <div class="footer-end"></div>
+      </div>
+    </footer>
+
+        <script src="../../js/events.js"></script>
+    <script src="../../js/events-detail.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../js/translations.js"></script>
+  </body>
+</html>

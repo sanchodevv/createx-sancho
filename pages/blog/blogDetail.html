@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/assets/Vector.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../../dist/output.css" rel="stylesheet" />
+    <title>Createx</title>
+  </head>
+  <body>
+    <header class="header bg-white/95 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-100">
+      <div
+        class="header-wrap py-4 flex max-w-7xl mx-auto px-6 justify-between items-center"
+      >
+        <div class="header-first flex items-center gap-10 lg:gap-16">
+          <div class="header-logo">
+            <a href="/home.html"><img src="../../assets/logo.png" alt="Createx Logo" class="h-6 sm:h-7" /></a>
+          </div>
+          <nav class="hidden lg:block">
+            <ul class="flex gap-8 xl:gap-10">
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/about/about.html"
+                  t="nav_about"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/courses/courses.html"
+                  t="nav_courses"
+                  >Courses</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/events/events.html"
+                  t="nav_events"
+                  >Events</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/blog/blog.html"
+                  t="nav_blog"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-base font-bold text-[#424551] hover:text-[#F75E05] transition-colors duration-300"
+                  href="/pages/contacts/contacts.html"
+                  t="nav_contacts"
+                  >Contacts</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header-second flex gap-3 sm:gap-6 items-center">
+          <select
+            class="lang-select bg-white/80 hover:bg-white text-[#424551] font-semibold text-xs sm:text-sm border border-[#D7DADD] rounded px-2 py-1 outline-none cursor-pointer hover:border-[#FF3F18] transition-colors"
+            aria-label="Language"
+          >
+            <option value="en">EN</option>
+            <option value="ru">RU</option>
+            <option value="uz">UZ</option>
+          </select>
+
+          <button
+            t="btn_consultation"
+            class="hidden sm:inline-block px-5 py-2.5 rounded-lg bg-[#F75E05] hover:bg-[#fff] text-[#fff] hover:text-[#F75E05] transition-colors duration-300 text-sm font-semibold border border-[#F75E05]"
+          >
+            Get consultation
+          </button>
+          <div class="login-btns hidden md:flex items-center text-sm">
+            <button class="font-semibold text-[#424551] hover:text-[#F75E05]">
+              <a href="/pages/login/login.html" t="btn_login">Log in</a>
+            </button>
+            <span class="mx-1 text-[#424551]">/</span>
+            <button class="font-semibold text-[#424551] hover:text-[#F75E05]">
+              <a href="/pages/login/register.html" t="btn_register">Sign up</a>
+            </button>
+          </div>
+          <button
+            id="burger-btn"
+            class="lg:hidden p-2 text-gray-700 hover:text-[#F75E05] focus:outline-none"
+            aria-label="Toggle navigation"
+          >
+            <svg id="burger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4 shadow-lg transition-all duration-300">
+        <nav class="flex flex-col gap-3">
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/about/about.html" t="nav_about">About Us</a>
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/courses/courses.html" t="nav_courses">Courses</a>
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/events/events.html" t="nav_events">Events</a>
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/blog/blog.html" t="nav_blog">Blog</a>
+          <a class="text-base font-bold text-[#424551] hover:text-[#F75E05] py-2" href="/pages/contacts/contacts.html" t="nav_contacts">Contacts</a>
+          <div class="pt-3 border-t border-gray-100 flex flex-col gap-3">
+            <button t="btn_consultation" class="w-full py-2.5 rounded-lg bg-[#F75E05] text-[#fff] text-sm font-semibold">
+              Get consultation
+            </button>
+            <div class="flex justify-center items-center gap-2 text-sm font-semibold pt-1">
+              <a href="/pages/login/login.html" class="text-[#424551] hover:text-[#F75E05]" t="btn_login">Log in</a>
+              <span class="text-[#424551]">/</span>
+              <a href="/pages/login/register.html" class="text-[#424551] hover:text-[#F75E05]" t="btn_register">Sign up</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div id="blog-detail-container" class="w-full"></div>
+        </div>
+      </section>
+      <section class="bg-[#F4F5F6] mt-20 lg:mt-32">
+        <div class="max-w-7xl mx-auto px-6 py-12 lg:py-16 flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div class="hidden lg:block shrink-0">
+            <img src="/assets/illustration (9).png" alt="" class="max-w-xs xl:max-w-sm h-auto" />
+          </div>
+          <div class="w-full max-w-xl">
+            <h1 class="font-bold text-2xl sm:text-3xl max-w-[500px]">
+              Want to get the best articles weekly? Subscribe to our newsletter!
+            </h1>
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-8 sm:mt-12 mb-6">
+              <input
+                class="py-3 px-4 bg-white rounded-md border border-gray-300 w-full sm:w-80 outline-none"
+                type="email"
+                placeholder="Your working email"
+              />
+              <button
+                class="text-center px-8 py-3 text-[#fff] hover:bg-[#fff] hover:text-[#F75E05] transition-colors duration-300 bg-[#F75E05] rounded-lg border border-[#F75E05] font-semibold shrink-0"
+              >
+                Subscribe
+              </button>
+            </div>
+            <div class="flex gap-3 items-center text-sm">
+              <input class="accent-red-500 w-4 h-4 shrink-0" type="checkbox" />
+              <p>
+                I agree to receive communications from Createx Online School
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="posts max-w-7xl mx-auto px-6 py-16 sm:py-20">
+        <div class="posts-info flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-10">
+          <div>
+            <h3 class="font-bold text-base">Our blog</h3>
+            <h1 class="font-bold text-3xl sm:text-4xl">Latest posts</h1>
+          </div>
+          <a
+            class="px-[30px] py-[10px] text-[#fff] hover:bg-[#fff] hover:text-[#F75E05] transition-colors duration-300 bg-[#F75E05] rounded-lg border border-[#F75E05]"
+            href="/pages/blog/blog.html"
+          >
+            Go to blog</a
+          >
+        </div>
+        <div class="posts-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div class="posts-card flex flex-col">
+            <div class="relative overflow-hidden rounded-lg">
+              <p
+                class="absolute top-3 left-3 px-2 py-1 bg-white text-xs font-semibold rounded-md shadow-sm z-10"
+              >
+                Podcast
+              </p>
+              <img src="/assets/post.png" alt="" class="w-full h-auto object-cover" />
+            </div>
+            <div class="pt-4 flex flex-col grow">
+              <h4 class="font-normal text-xs sm:text-sm text-[#787A80]">
+                Marketing | September 4, 2020 | 36 min
+              </h4>
+              <h2 class="font-bold text-lg py-2 grow">
+                What is traffic arbitrage and does it really make money?
+              </h2>
+              <p class="text-[#787A80] text-sm pb-4">
+                Pharetra, ullamcorper iaculis viverra parturient sed id sed.
+                Convallis proin dignissim lacus, purus gravida...
+              </p>
+              <a href="/pages/blog/blogDetail.html" class="font-bold inline-flex items-center gap-2 hover:text-[#F75E05]"
+                >Listen <span class="text-[#F75E05]">-></span></a
+              >
+            </div>
+          </div>
+          <div class="posts-card flex flex-col">
+            <div class="relative overflow-hidden rounded-lg">
+              <p
+                class="absolute top-3 left-3 px-2 py-1 bg-white text-xs font-semibold rounded-md shadow-sm z-10"
+              >
+                Podcast
+              </p>
+              <img src="/assets/post.png" alt="" class="w-full h-auto object-cover" />
+            </div>
+            <div class="pt-4 flex flex-col grow">
+              <h4 class="font-normal text-xs sm:text-sm text-[#787A80]">
+                Marketing | September 4, 2020 | 36 min
+              </h4>
+              <h2 class="font-bold text-lg py-2 grow">
+                What is traffic arbitrage and does it really make money?
+              </h2>
+              <p class="text-[#787A80] text-sm pb-4">
+                Pharetra, ullamcorper iaculis viverra parturient sed id sed.
+                Convallis proin dignissim lacus, purus gravida...
+              </p>
+              <a href="/pages/blog/blogDetail.html" class="font-bold inline-flex items-center gap-2 hover:text-[#F75E05]"
+                >Listen <span class="text-[#F75E05]">-></span></a
+              >
+            </div>
+          </div>
+          <div class="posts-card flex flex-col">
+            <div class="relative overflow-hidden rounded-lg">
+              <p
+                class="absolute top-3 left-3 px-2 py-1 bg-white text-xs font-semibold rounded-md shadow-sm z-10"
+              >
+                Podcast
+              </p>
+              <img src="/assets/post.png" alt="" class="w-full h-auto object-cover" />
+            </div>
+            <div class="pt-4 flex flex-col grow">
+              <h4 class="font-normal text-xs sm:text-sm text-[#787A80]">
+                Marketing | September 4, 2020 | 36 min
+              </h4>
+              <h2 class="font-bold text-lg py-2 grow">
+                What is traffic arbitrage and does it really make money?
+              </h2>
+              <p class="text-[#787A80] text-sm pb-4">
+                Pharetra, ullamcorper iaculis viverra parturient sed id sed.
+                Convallis proin dignissim lacus, purus gravida...
+              </p>
+              <a href="/pages/blog/blogDetail.html" class="font-bold inline-flex items-center gap-2 hover:text-[#F75E05]"
+                >Listen <span class="text-[#F75E05]">-></span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#1E212C]">
+      <div class="footer-wrap flex flex-col items-start max-w-7xl mx-auto px-6">
+        <div class="footer-head my-12 lg:my-16 flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-8 lg:gap-12 w-full">
+          <div class="head-first flex flex-col gap-5">
+            <img class="w-[130px]" src="/assets/logo (1).png" alt="" />
+            <p class="text-[#94959B] w-[279px] text-xs">
+              Createx Online School is a leader in online studying. We have lots
+              of courses and programs from the main market experts. We provide
+              relevant approaches to online learning, internships and employment
+              in the largest companies in the country.
+            </p>
+            <div class="flex gap-5">
+              <img class="w-[24px]" src="/assets/Facebook.png" alt="" />
+              <img class="w-[24px]" src="/assets/Twitter.png" alt="" />
+              <img class="w-[24px]" src="/assets/YouTube.png" alt="" />
+              <img class="w-[24px]" src="/assets/telegram (3).png" alt="" />
+              <img class="w-[24px]" src="/assets/Instagram (2).png" alt="" />
+              <img class="w-[24px]" src="/assets/Linked-In.png" alt="" />
+            </div>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_sitemap" class="text-base font-bold text-[#fff]">SITE MAP</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/about/about.html"
+                    t="nav_about"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/courses/courses.html"
+                    t="nav_courses"
+                    >Courses</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/events/events.html"
+                    t="nav_events"
+                    >Events</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/blog/blog.html"
+                    t="nav_blog"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="/pages/contacts/contacts.html"
+                    t="nav_contacts"
+                    >Contacts</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_courses" class="text-base font-bold text-[#fff]">COURSES</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Marketing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Management</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >HR & Recruting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >Development</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-second">
+            <h2 t="footer_contact" class="text-base font-bold text-[#fff]">CONTACT US</h2>
+            <nav>
+              <ul class="flex flex-col gap-2 mt-5">
+                <li class="flex gap-2">
+                  <img src="/assets/iPhone.png" alt="" />
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >(405) 555-0128</a
+                  >
+                </li>
+                <li class="flex gap-2">
+                  <img src="/assets/Mail.png" alt="" />
+                  <a
+                    class="text-base font-normal text-[#94959B] hover:text-[#F75E05] transition-colors duration-300"
+                    href="#"
+                    >hello@createx.com</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="head-third max-w-sm">
+            <h2 t="footer_newsletter" class="text-base font-bold text-[#fff]">
+              SIGN UP TO OUR NEWSLETTER
+            </h2>
+            <input
+              t="placeholder_email"
+              class="mt-5 mb-5 bg-[#FFFFFF1F] p-2.5 w-full rounded-lg border border-gray-600 text-white placeholder-gray-400 focus:outline-none"
+              type="email"
+              placeholder="Email"
+            />
+            <p t="footer_disclaimer" class="text-[#94959B] text-xs">
+              *Subscribe to our newsletter to receive communications and early
+              updates from Createx SEO Agency.
+            </p>
+          </div>
+        </div>
+        <div class="footer-end"></div>
+      </div>
+    </footer>
+    <script src="../../js/blog.js"></script>
+    <script src="../../js/blog-detail.js"></script>
+    <script src="../../js/lucide.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../../js/translations.js"></script>
+  </body>
+</html>
